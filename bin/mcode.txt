@@ -1,0 +1,44 @@
+1 segment code
+
+1 proc main
+3	stack - 2
+3	stack - 2
+3	stack - 2
+4	push_all
+7	call read
+3	stack + 0
+4	pop_all
+8	pop reg1
+10	stack [ + 2 ] = reg1
+10	stack [ + 0 ] = 0
+5 B1:
+9	reg2 = stack [ + 2 ]
+11	reg3 = reg2 > 0
+6	if_false reg3 goto B1_
+9	reg4 = stack [ + 0 ]
+9	reg5 = stack [ + 2 ]
+11	reg6 = reg4 + reg5
+10	stack [ + 0 ] = reg6
+9	reg7 = stack [ + 2 ]
+11	reg8 = reg7 - 1
+10	stack [ + 2 ] = reg8
+6	goto B1
+5 B1_:
+9	reg9 = stack [ + 0 ]
+4	push_all
+8	push reg9
+7	call write
+3	stack + 2
+4	pop_all
+3	stack + 4
+7	ret
+1 proc end main
+
+1 segment end code
+
+1 segment data
+1 segment end data
+
+1 segment stack
+
+1 segment end stack

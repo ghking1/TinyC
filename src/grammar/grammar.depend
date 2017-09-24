@@ -1,0 +1,89 @@
+# depslib dependency file v1.0
+1402582857 source:/media/D/Dropbox/My_Forms/compile/grammar/main.cpp
+	<iostream>
+	<fstream>
+	"need.h"
+	<cstdlib>
+	<vector>
+	<map>
+	<string>
+	<set>
+	<utility>
+	<stack>
+	<queue>
+	<iostream>
+	<fstream>
+	"need.h"
+	<cstdlib>
+	<vector>
+	<map>
+	<string>
+	<set>
+	<utility>
+	<stack>
+	<queue>
+
+1401917391 
+
+1401917391 /media/D/Dropbox/My_Forms/compile/grammar/need.h
+	<vector>
+	<map>
+	<string>
+	<vector>
+	<map>
+	<string>
+
+1401921698 source:d:\dropbox\my_forms\compile\grammar\main.cpp
+	<iostream>
+	<fstream>
+	"need.h"
+	<cstdlib>
+	<vector>
+	<map>
+	<string>
+	<set>
+	<utility>
+	<stack>
+	<queue>
+
+1401917391 d:\dropbox\my_forms\compile\grammar\need.h
+	<vector>
+	<map>
+	<string>
+
+1404056145 source:d:\kuaipan\compile\grammar\main.cpp
+	<iostream>
+	<fstream>
+	"need.h"
+	<cstdlib>
+	<vector>
+	<map>
+	<string>
+	<set>
+	<utility>
+	<stack>
+	<queue>
+
+1404055755 d:\kuaipan\compile\grammar\need.h
+	<vector>
+	<map>
+	<string>
+
+1404056145 source:/media/D/kuaipan/compile/grammar/main.cpp
+	<iostream>
+	<fstream>
+	"need.h"
+	<cstdlib>
+	<vector>
+	<map>
+	<string>
+	<set>
+	<utility>
+	<stack>
+	<queue>
+
+1404055755 /media/D/kuaipan/compile/grammar/need.h
+	<vector>
+	<map>
+	<string>
+

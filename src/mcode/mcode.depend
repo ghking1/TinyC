@@ -1,0 +1,55 @@
+# depslib dependency file v1.0
+1404423723 source:/media/D/kuaipan/compile/mcode/main.cpp
+	<iostream>
+	<fstream>
+	<list>
+	<queue>
+	"mcode.h"
+	<cstdlib>
+	<cstring>
+
+1404582115 /media/D/kuaipan/compile/mcode/mcode.h
+	<string>
+	<vector>
+
+1404578959 source:/media/D/kuaipan/compile/mcode/table.cpp
+	<iostream>
+	<vector>
+	<string>
+	"mcode.h"
+
+1404584618 source:/media/D/kuaipan/compile/mcode/VN_functions.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"mcode.h"
+
+1404742055 source:d:\kuaipan\compile\mcode\main.cpp
+	<iostream>
+	<fstream>
+	<list>
+	<queue>
+	"mcode.h"
+	<cstdlib>
+	<cstring>
+
+1404737892 d:\kuaipan\compile\mcode\mcode.h
+	<string>
+	<vector>
+
+1404640186 source:d:\kuaipan\compile\mcode\table.cpp
+	<iostream>
+	<vector>
+	<string>
+	"mcode.h"
+
+1404737892 source:d:\kuaipan\compile\mcode\vn_functions.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"mcode.h"
+

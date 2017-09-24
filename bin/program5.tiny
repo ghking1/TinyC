@@ -1,0 +1,21 @@
+
+int a;
+int b[3];
+
+void main(void)
+{
+	int i;
+	int a;
+	a=0;
+	i=0;
+	b[0]=1;
+	b[1]=2;
+	b[2]=3;
+	while(i<3)
+	{
+		a=a+b[i];
+		i=i+1;
+	}
+
+	write(a);	
+}

@@ -1,0 +1,19 @@
+void	void
+ID	main
+(	(
+void	void
+)	)
+{	{
+int	int
+ID	a
+;	;
+ID	write
+(	(
+ID	a
+)	)
+;	;
+return	return
+;	;
+}	}
+
+$	$

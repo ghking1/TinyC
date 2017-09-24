@@ -1,0 +1,27 @@
+
+void hello(int b)
+{
+	write(b);
+	return;
+}
+
+void world(int b)
+{
+	write(b);
+	return;
+}
+
+void main(void)
+{
+	int a;
+	a=read();
+	if(a==0)
+	{
+		hello(6);
+	}
+	else
+	{
+		world(8);
+	}
+	return;	
+}

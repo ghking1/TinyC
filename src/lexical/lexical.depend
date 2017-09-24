@@ -1,0 +1,109 @@
+# depslib dependency file v1.0
+1403935971 source:d:\kuaipan\compile\lexical\dfa_node.cpp
+	<set>
+	<stack>
+	<iostream>
+	<map>
+	<stack>
+	<utility>
+	<set>
+	"nfa_node.h"
+	"dfa_node.h"
+	"varible.h"
+
+1403933981 "
+
+1403879102 d:\kuaipan\compile\lexical\nfa_node.h
+	<map>
+	<utility>
+	<set>
+	<fstream>
+	"varible.h"
+
+1404739033 d:\kuaipan\compile\lexical\varible.h
+	<map>
+	<iostream>
+	<stack>
+	<set>
+	<fstream>
+
+1403936903 
+
+1403879100 d:\kuaipan\compile\lexical\dfa_node.h
+	<set>
+	"varible.h"
+
+1404064694 source:d:\kuaipan\compile\lexical\main.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<string>
+	<map>
+	<stack>
+	<cctype>
+	<set>
+	"varible.h"
+
+1403933352 h"
+
+1403933981 source:d:\kuaipan\compile\lexical\nfa_node.cpp
+	<iostream>
+	<fstream>
+	<map>
+	<stack>
+	<utility>
+	<cctype>
+	<cstdlib>
+	<set>
+	"nfa_node.h"
+	"varible.h"
+
+1403935971 source:/media/D/kuaipan/compile/lexical/dfa_node.cpp
+	<set>
+	<stack>
+	<iostream>
+	<map>
+	<stack>
+	<utility>
+	<set>
+	"nfa_node.h"
+	"dfa_node.h"
+	"varible.h"
+
+1403879102 /media/D/kuaipan/compile/lexical/nfa_node.h
+	<map>
+	<utility>
+	<set>
+	<fstream>
+	"varible.h"
+
+1404052795 /media/D/kuaipan/compile/lexical/varible.h
+	<map>
+	<iostream>
+	<stack>
+
+1403879100 /media/D/kuaipan/compile/lexical/dfa_node.h
+	<set>
+	"varible.h"
+
+1403936917 source:/media/D/kuaipan/compile/lexical/nfa_node.cpp
+	<iostream>
+	<fstream>
+	<map>
+	<stack>
+	<utility>
+	<cctype>
+	<cstdlib>
+	<set>
+	"nfa_node.h"
+	"varible.h"
+
+1404052286 source:/media/D/kuaipan/compile/lexical/main.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<string>
+	"varible.h"
+	"nfa_node.h"
+	"dfa_node.h"
+

@@ -1,0 +1,20 @@
+
+void fun(int a)
+{
+	if(a==0)
+	{
+		return;
+	}
+	else
+	{
+		a=a-1;
+		write(a);
+		fun(a);
+		return;
+	}
+}
+
+void main(void)
+{
+	fun(5);
+}

@@ -1,0 +1,170 @@
+
+;********************
+code segment
+;--------------------
+write proc near
+    MOV DI, SP
+    MOV AX, SS:[DI+2]
+
+    MOV DL, 0AH
+    MOV CL, 00H
+T1:
+    CMP AX, 00H
+    JZ  T1_
+    DIV DL
+    ADD AH, 30H
+    MOV BL, AH
+    PUSH BX
+    MOV AH, 00H
+    INC CL
+    JMP T1
+T1_:
+
+    INC CL
+T2:
+    DEC CL
+    JZ T2_
+    POP DX
+    MOV AH, 02H
+    INT 21H
+    JMP T2
+T2_:
+    RET
+write endp
+
+;--------------------
+read proc near
+    MOV CL, 03H
+    MOV CH, 00H
+
+    INC CL
+T3:
+    DEC CL
+    JZ T3_
+    MOV AH, 01H
+    INT 21H
+    CMP AL, 0DH
+    JZ T3_
+    SUB AL, 30H
+    PUSH AX
+    INC CH
+    JMP T3
+T3_:
+
+    MOV BX, 00H
+    MOV CL, CH
+    INC CL
+    MOV DL, 01H
+    MOV DH, 0AH
+T4:
+    DEC CL
+    JZ  T4_
+    POP AX
+    MUL DL
+    ADD BX, AX
+    MOV AL, DL
+    MUL DH
+    MOV DL, AL
+    JMP T4
+T4_:
+    MOV DI, SP
+    MOV SS:[DI+18], BX
+    RET
+read endp
+
+;--------------------
+main proc far
+	assume cs:code, ds:data, ss:stack
+start:
+	MOV AX, data
+	MOV DS, AX
+	MOV AX, stack
+	MOV SS, AX
+	MOV SP, OFFSET tos
+
+	SUB SP, 2
+	MOV DI, SP
+	MOV WORD PTR SS:[DI+0], 0
+B1:
+	MOV DI, SP
+	MOV AX, WORD PTR SS:[DI+0]
+	MOV BX, AX
+	CMP BX, 10
+	JB L1
+	MOV BX, 0
+	JMP L1_
+L1:
+	MOV BX, 1
+L1_:
+	CMP BX, 0
+	JZ B1_
+	MOV DI, SP
+	MOV AX, WORD PTR SS:[DI+0]
+	MOV DI, SP
+	MOV BX, WORD PTR SS:[DI+0]
+	MOV DI, AX
+	MOV WORD PTR b[DI], BX
+	MOV DI, SP
+	MOV AX, WORD PTR SS:[DI+0]
+	MOV BX, AX
+	ADD BX, 1
+	MOV DI, SP
+	MOV WORD PTR SS:[DI+0], BX
+	JMP B1
+B1_:
+	MOV WORD PTR a, 0
+	MOV DI, SP
+	MOV WORD PTR SS:[DI+0], 0
+B2:
+	MOV DI, SP
+	MOV AX, WORD PTR SS:[DI+0]
+	MOV BX, AX
+	CMP BX, 10
+	JB L2
+	MOV BX, 0
+	JMP L2_
+L2:
+	MOV BX, 1
+L2_:
+	CMP BX, 0
+	JZ B2_
+	MOV AX, WORD PTR a
+	MOV DI, SP
+	MOV BX, WORD PTR SS:[DI+0]
+	MOV DI, BX
+	MOV CX, WORD PTR b[DI]
+	MOV BX, AX
+	ADD BX, CX
+	MOV WORD PTR a, BX
+	MOV DI, SP
+	MOV AX, WORD PTR SS:[DI+0]
+	MOV BX, AX
+	ADD BX, 1
+	MOV DI, SP
+	MOV WORD PTR SS:[DI+0], BX
+	JMP B2
+B2_:
+	MOV AX, WORD PTR a
+	PUSHA
+	PUSH AX
+	CALL write
+	ADD SP, 2
+	POPA
+	MOV AX, 4C00H
+	INT 20H
+	RET
+main endp
+
+code ends
+
+;********************
+data segment
+	a	DW	1 DUP('0')
+	b	DW	10 DUP('0')
+data ends
+
+;********************
+stack segment
+	DB 0FFH DUP('0')
+	tos label word
+stack ends
